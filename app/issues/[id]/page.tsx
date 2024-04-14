@@ -8,6 +8,7 @@ import Link from "@/app/(components)/Link";
 import { Pencil2Icon } from "@radix-ui/react-icons";
 import EditIssueButton from "./EditIssueButton";
 import IssueDetails from "./IssueDetails";
+import DeleteIssueButton from "./DeleteIssueButton";
 
 interface Props {
 	params: { id: string };
@@ -29,10 +30,11 @@ const IssueDetailPage = async ({ params }: Props) => {
 					</Box>
 				</div>
 
-				<div className="w-full md:w-2/5 mx-auto">
-					<Box>
+				<div className="w-full md:w-1/5 mx-auto">
+					<Flex direction="column" gap="4">
 						<EditIssueButton issueId={issue.id} />
-					</Box>
+						<DeleteIssueButton issueId={issue.id} />
+					</Flex>
 				</div>
 			</div>
 		</div>
