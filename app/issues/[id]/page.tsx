@@ -4,6 +4,7 @@ import prisma from "@/prisma/client";
 import { Card, Flex, Heading, Text } from "@radix-ui/themes";
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import Link from "../components/Link";
 
 interface Props {
 	params: { id: string };
